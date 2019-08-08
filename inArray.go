@@ -1,18 +1,17 @@
-package main
+package exists
 
 import (
-	"fmt"
 	"reflect"
 )
 
-func main() {
-	rules := map[string][]string{
-		"name":    {"required", "min-len:20"},
-		"surname": {"required", "min-len:15"},
-	}
-	//k := []string{"required", "min-len:20"}
-	fmt.Print(in_array("required", rules))
-}
+//func main() {
+//	rules := map[string][]string{
+//		"name":    {"required", "min-len:20"},
+//		"surname": {"required", "min-len:15"},
+//	}
+//	//k := []string{"required", "min-len:20"}
+//	fmt.Print(in_array("required", rules))
+//}
 
 // find value in string array of map
 //func in_array(search interface{}, array interface{}) bool { // recursive call made.
@@ -50,7 +49,7 @@ func main() {
 //	return exists
 //}
 
-func in_array(search interface{}, array interface{}) bool {
+func In_array(search interface{}, array interface{}) bool {
 
 	val := reflect.ValueOf(array)
 	val = val.Convert(val.Type())
